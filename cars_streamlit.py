@@ -8,7 +8,7 @@ import pymongo
 cars_df = pd.read_csv('./data/data.csv')
 
 # get cars dataset
-client = pymongo.MongoClient('mongodb+srv://Soyda:Azerty12!@techiasandbox.idmzy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', 27017)
+client = pymongo.MongoClient(**st.secrets["mongo"])
 db = client.CarsData
 cars_db = db.carsdb
 
